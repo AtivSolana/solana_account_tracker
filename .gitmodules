@@ -1,0 +1,6 @@
+[submodule "tracker_receiver"]
+	path = tracker_receiver
+	url = https://github.com/ziinxed/tracker_receiver.git
+[submodule "tracker_publisher"]
+	path = tracker_publisher
+	url = https://github.com/ziinxed/tracker_publisher.git
