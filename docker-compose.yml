@@ -16,7 +16,7 @@ services:
       - rabbitmq3
     container_name: receiver
     build:
-      context: ./account_tracker_mq_receiver
+      context: ./tracker_receiver
       dockerfile: Dockerfile
     restart: always
     volumes:
@@ -34,7 +34,7 @@ services:
       - receiver
     container_name: tracker
     build:
-      context: ./account_tracker_websocket_client
+      context: ./tracker_publisher
       dockerfile: Dockerfile
     restart: always
     volumes:
@@ -51,7 +51,7 @@ services:
       - receiver
     container_name: tracker2
     build:
-      context: ./account_tracker_websocket_client
+      context: ./tracker_publisher
       dockerfile: Dockerfile
     restart: always
     volumes:
