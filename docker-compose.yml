@@ -29,24 +29,7 @@ services:
       - MQ_PASSWORD=${MQ_PASSWORD}
     links:
       - "rabbitmq3:rabbitmq"
-  tracker2:
-    depends_on:
-      - rabbitmq3
-    container_name: tracker2
-    build:
-      context: ./tracker_publisher
-      dockerfile: Dockerfile
-    restart: always
-    volumes:
-      - ./:/app
-    environment:
-      - MINT_ACCOUNT=${MINT_ACCOUNT}
-      - CLUSTER_ENDPOINT=${CLUSTER_ENDPOINT}
-      - MQ_HOST=${MQ_HOST}
-      - MQ_USER=${MQ_USER}
-      - MQ_PASSWORD=${MQ_PASSWORD}
-    links:
-      - "rabbitmq3:rabbitmq"
+
   receiver:
     depends_on:
       - rabbitmq3
