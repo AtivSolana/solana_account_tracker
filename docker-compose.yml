@@ -24,7 +24,9 @@ services:
     environment:
       - MINT_ACCOUNT=${MINT_ACCOUNT}
       - DB_URL=${DB_URL}
-      - MQ_ENDPOINT=${MQ_ENDPOINT}
+      - MQ_HOST=${MQ_HOST}
+      - MQ_USER=${MQ_USER}
+      - MQ_PASSWORD=${MQ_PASSWORD}
     links:
       - "rabbitmq3:rabbitmq"
 
@@ -42,7 +44,9 @@ services:
     environment:
       - MINT_ACCOUNT=${MINT_ACCOUNT}
       - CLUSTER_ENDPOINT=${CLUSTER_ENDPOINT}
-      - MQ_ENDPOINT=${MQ_ENDPOINT}
+      - MQ_HOST=${MQ_HOST}
+      - MQ_USER=${MQ_USER}
+      - MQ_PASSWORD=${MQ_PASSWORD}
     links:
       - "rabbitmq3:rabbitmq"
   tracker2:
@@ -59,6 +63,8 @@ services:
     environment:
       - MINT_ACCOUNT=${MINT_ACCOUNT}
       - CLUSTER_ENDPOINT=${CLUSTER_ENDPOINT}
-      - MQ_ENDPOINT=${MQ_ENDPOINT}
+      - MQ_HOST=${MQ_HOST}
+      - MQ_USER=${MQ_USER}
+      - MQ_PASSWORD=${MQ_PASSWORD}
     links:
       - "rabbitmq3:rabbitmq"
