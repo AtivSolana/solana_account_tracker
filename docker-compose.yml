@@ -46,5 +46,7 @@ services:
       - MQ_HOST=${MQ_HOST}
       - MQ_USER=${MQ_USER}
       - MQ_PASSWORD=${MQ_PASSWORD}
+    ports:
+      - "5432:5432"
     links:
       - "rabbitmq3:rabbitmq"
