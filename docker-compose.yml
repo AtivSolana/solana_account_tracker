@@ -33,7 +33,7 @@ services:
   tracker2:
     depends_on:
       - rabbitmq3
-    container_name: tracker
+    container_name: tracker2
     build:
       context: ./tracker_publisher
       dockerfile: Dockerfile
