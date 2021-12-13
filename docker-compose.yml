@@ -19,8 +19,6 @@ services:
       context: ./tracker_publisher
       dockerfile: Dockerfile
     restart: always
-    volumes:
-      - ./:/app
     environment:
       - MINT_ACCOUNT=${MINT_ACCOUNT}
       - CLUSTER_ENDPOINT=https://solana-api.projectserum.com
@@ -38,8 +36,6 @@ services:
       context: ./tracker_publisher
       dockerfile: Dockerfile
     restart: always
-    volumes:
-      - ./:/app
     environment:
       - MINT_ACCOUNT=${MINT_ACCOUNT}
       - CLUSTER_ENDPOINT=https://api.mainnet-beta.solana.com
@@ -57,8 +53,6 @@ services:
       context: ./tracker_receiver
       dockerfile: Dockerfile
     restart: always
-    volumes:
-      - ./:/app
     environment:
       - MINT_ACCOUNT=${MINT_ACCOUNT}
       - DB_URL=${DB_URL}
