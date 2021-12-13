@@ -27,6 +27,12 @@ services:
       - MQ_PASSWORD=${MQ_PASSWORD}
     links:
       - "rabbitmq3:rabbitmq"
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: "accounttracker/log"
+        awslogs-region: "us-east-2"
+        awslogs-stream: "websocket/projectserum"
 
   tracker2:
     depends_on:
@@ -49,7 +55,7 @@ services:
       options:
         awslogs-group: "accounttracker/log"
         awslogs-region: "us-east-2"
-        awslogs-stream: "websocket/connection"
+        awslogs-stream: "websocket/mainnet-beta"
 
   receiver:
     depends_on:
