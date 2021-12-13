@@ -23,7 +23,7 @@ services:
       - ./:/app
     environment:
       - MINT_ACCOUNT=${MINT_ACCOUNT}
-      - CLUSTER_ENDPOINT=${CLUSTER_ENDPOINT}
+      - CLUSTER_ENDPOINT=https://solana-api.projectserum.com
       - MQ_HOST=${MQ_HOST}
       - MQ_USER=${MQ_USER}
       - MQ_PASSWORD=${MQ_PASSWORD}
@@ -42,7 +42,7 @@ services:
       - ./:/app
     environment:
       - MINT_ACCOUNT=${MINT_ACCOUNT}
-      - CLUSTER_ENDPOINT=${CLUSTER_ENDPOINT}
+      - CLUSTER_ENDPOINT=https://api.mainnet-beta.solana.com
       - MQ_HOST=${MQ_HOST}
       - MQ_USER=${MQ_USER}
       - MQ_PASSWORD=${MQ_PASSWORD}
